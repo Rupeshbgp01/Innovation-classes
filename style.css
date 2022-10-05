@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 25px;
+
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-list li a:hover {
+    color: yellow;
+}
+
+.nav-list {
+    justify-content: space-around;
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+.rightNav {
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.resp-logo {
+    display: none;
+    left: 5%;
+    top: 10px;
+    position: absolute;
+
+}
+
+.logo img {
+    width: 33%;
+    border: 2px solid white;
+    border-radius: 150px;
+}
+
+#search {
+
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+    border-radius: 9px;
+}
+
+.btn {
+    color: white;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.btn:hover {
+    background-color: rgba(70, 143, 70, 0.669);
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.7) url(city.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.icon {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 20px;
+}
+
+.line {
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 3px 3px;
+}
+
+
+/* ----------- first section---------------- */
+.text-big {
+
+    font-size: 30px;
+}
+
+.text-small {
+
+    font-size: 20px;
+}
+
+.main-box {
+    color: white;
+    width: 60%;
+    display: flex;
+    padding-top: 200px;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.firstsection {
+    height: 100vh;
+}
+
+.firsthalf {
+    width: 80%;
+    padding: 10px;
+}
+
+.secondhalf {
+    margin: 10px;
+}
+
+.secondhalf img {
+    border: 2px solid white;
+    border-radius: 150px;
+    width: 80%;
+}
+
+/* ------------second section-------------- */
+
+.secondsection {
+    padding-top: 30px;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.secleft {
+    margin: 20px;
+    padding: 10px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ------------contact------------ */
+
+.contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.2));
+    height: 100vh;
+}
+
+.form {
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.form-box input,
+.textarea {
+    width: 100%;
+    padding: 10px;
+
+    border-color: rgb(218, 204, 204);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.big-btn {
+
+    /* width: 20%; */
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+}
+
+.big-btn:hover {
+    background-color: green;
+}
+
+.text-centre {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    padding: 20px;
+    background-color: black;
+}
+
+/* --------slider-------- */
+.myslider{
+    height: 100vh;
+    background-color: rgba(188, 170, 170, 0.2);
+}
+.slider{
+    width: 800px;
+    height: 400px;
+    background: url('library1.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 2px 10px 5px black;
+    margin: auto;
+    animation: imgSlider 12s infinite linear;
+}
+@keyframes imgSlider{
+    0%{background: url('library1.jpg');background-size: cover;}
+    35%{background: url('library2.jpg');background-size: cover;}
+    75%{background: url('library3.jpg');background-size: cover;}
+}
+
+
+/* ----------Responsive--------------- */
+
+@media only screen and (max-width:1140px) {
+    .nav-list {
+        flex-direction: column;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    .navbar {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+        flex-direction: column;
+        transition: all 0.3s ease-out;
+    }
+
+    .rightNav {
+        display: none;
+    }
+
+    .nav-list li a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+
+    }
+
+    .icon {
+        display: block;
+    }
+    .icon:hover{
+        background-color: gray;
+    }
+
+    .logo {
+        display: none;
+        left: 5%;
+        top: 20px;
+    }
+
+    .new-nav {
+        height: 70px;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+    }
+    .new-nav-resp{
+        height: 400px;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    }
+
+    .vis-resp {
+        opacity: 1;
+    }
+
+    .resp-logo {
+        display: block;
+    }
+
+    .r-logo img {
+        width: 20%;
+        border: 2px solid white;
+        border-radius: 150px;
+    }
+
+    .firstsection {
+        height: 80vh;
+    }
+
+    .main-box {
+        flex-direction: column-reverse;
+        padding-top: 5px;
+        
+    }
+
+    .firsthalf {
+        margin: auto;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .secondhalf {
+        padding-left: 22%;
+        width: 100%;
+    }
+
+    .secondhalf img {
+        width: 50%;
+    }
+
+    .background {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .secondsection {
+        flex-direction: column-reverse;
+    }
+
+    .secleft {
+        text-align: center;
+    }
+
+    .text-big {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .text-small {
+
+        font-size: 15px;
+    }
+    .slider{
+        width: 70%;
+        height: 50%;
+    }
+    .myslider{
+        height: 60vh;
+    }
+
+}
